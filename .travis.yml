@@ -12,6 +12,7 @@ env:
     - CONDA_PY=27
     - CONDA_PY=34
     - CONDA_PY=35
+    - CONDA_PY=36
   global:
     # The BINSTAR_TOKEN secure variable. This is defined canonically in conda-forge.yml.
     - secure: "nPdVD/QJQyIibIozU9a43ZtBwCcjz6d0Qapui68hOvdPTc9LGVYK7vYvIRg9cNjtPaOk2b2tSdBwLdpSFlvAolgNlpfxaOPL6AH4gppEBUf3uxdXfGEu8kfwZzpvA3I3nrvImd3RQPlWJID8lJaurEX3T3/r2eL65IfvXPplvvQKd21z6sFRe6JzFTH6egRU4LgVgeKDtaa/7R2fkkRWoWAyEK6xZh9sEIb0OoanVorHHtnet0EptyY73bGye+GnUx4FLLIyCSlhoKmaxz1HK8y5gJSFvqPzmQ6cJj3sdQlvr7+nAZZViUCpOdI3+Wq/mX9IlTQYxts/EaCbH3LLU8HgpUciw7yXf8WSz7zR7cQs92DwlilmzkGEYTM/ganaogVO1TN/HTw5gpO7dFWETqUymRmaZFQfvUvcocZYxiGPo1EGo2xB9depOB05FzsPoiRyPc5Wz+MoGit0BAPGwpBE9dNICyI6CYlYy+JdEc+AHkNnPjmQzgXwlw+vFf+YiGUrGlhNL6xaBlyqwzhynilF/2jZW+WUenjDawX3wU79Iyu+XrWg4lywrkBKhQZ0oS0i1wqR/MwjOpV8W2qD0TmtKY7xe2wQIgUnTCymCvfVWFg0jpBBxpOt7ZAIHEUr1pTqsxOy1ntx2/eAhckU2Fz0rsWA7bGsLBX3eROz/tg="
@@ -25,9 +26,9 @@ before_install:
 
 install:
     - |
-      MINICONDA_URL="http://repo.continuum.io/miniconda"
+      MINICONDA_URL="https://repo.continuum.io/miniconda"
       MINICONDA_FILE="Miniconda3-latest-MacOSX-x86_64.sh"
-      curl -O "${MINICONDA_URL}/${MINICONDA_FILE}"
+      curl -L -O "${MINICONDA_URL}/${MINICONDA_FILE}"
       bash $MINICONDA_FILE -b
 
       source /Users/travis/miniconda3/bin/activate root
