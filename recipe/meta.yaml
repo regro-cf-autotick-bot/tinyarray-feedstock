@@ -1,5 +1,5 @@
 {% set name = "tinyarray" %}
-{% set version = "1.2.0a1" %}
+{% set version = "1.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: v{{ version }}.tar.gz
   url: https://gitlab.kwant-project.org/kwant/tinyarray/repository/archive.tar.gz?ref=v{{ version }}
-  sha256: e155a1c373c90d81877f953810f108cff72cf22a50c44b9cf86a803035198d04
+  sha256: 5986fb459eba3ce75af294c285c13a83d0963a58699c85002fc0921dc2bdb996
   
 build:
   number: 0
