@@ -19,18 +19,18 @@ requirements:
     - python
     - setuptools
     - toolchain
-    - nose
+    - pytest
   run:
     - python
 
 test:
   requires:
     - numpy
-#    - nose
-#  source_files:
-#    - test_tinyarray.py
-#  commands:
-#    - python test_tinyarray.py
+    - pytest
+  source_files:
+    - test_tinyarray.py
+  commands:
+    - python test_tinyarray.py
   imports:
     - tinyarray
 
