@@ -32,7 +32,7 @@ test:
   source_files:
     - test_tinyarray.py
   commands:
-    - python test_tinyarray.py
+    - py.test test_tinyarray.py
   imports:
     - tinyarray
 
