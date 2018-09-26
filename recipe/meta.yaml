@@ -1,5 +1,5 @@
 {% set name = "tinyarray" %}
-{% set version = "1.2.0" %}
+{% set version = "1.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,10 +8,10 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://downloads.kwant-project.org/tinyarray/tinyarray-{{ version }}.tar.gz
-  sha256: 9a2f5a98c0dcba1e7c42ccaf0caef382c822349b8038ad31e4f8c9abe4c71c87
+  sha256: 95742be0a4d51d37710df334ac97f6953ad336399140e35f230016699ac53d97
 
 build:
-  number: 2
+  number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
